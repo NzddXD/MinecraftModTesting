@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "mod-keren-testing",
+	"version": "${version}",
+	"name": "mod-keren-testing",
+	"description": "A Testing Mod",
+	"authors": [
+		"NzddXD"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/mod-keren-testing/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.github.nzddxd.Modkerentesting"
+		],
+		"client": [
+			"com.github.nzddxd.ModkerentestingClient"
+		],
+		"fabric-datagen": [
+			"com.github.nzddxd.ModkerentestingDataGenerator"
+		]
+	},
+	"mixins": [
+		"mod-keren-testing.mixins.json",
+		{
+			"config": "mod-keren-testing.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
